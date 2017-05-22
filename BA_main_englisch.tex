@@ -1,0 +1,107 @@
+\input{preamble}
+\begin{document}
+
+% \frontmatter
+\mainmatter
+
+
+% Titelpageseite
+\begin{titlepage}
+ \begin{tabularx}{\linewidth}{X}
+  \includegraphics[width=6cm]{TU_Logo_SW} \\\hline\hline
+
+  \vspace{4.5em}
+
+  \begin{singlespace}\begin{center}\bfseries\Huge
+  
+  Partial decay widths and form factor implementation
+  for the simulation of the \(\Lambda_c^+\) decays in SHERPA
+  
+  \end{center}\end{singlespace}
+
+  \vspace{5.5em}
+
+  \begin{singlespace}\begin{center}\large
+   Bachelor-Arbeit \\ zur Erlangung des Hochschulgrades \\ 
+   Bachelor of Science \\ 
+   im Bachelor-Studiengang Physik
+  \end{center}\end{singlespace}\medskip
+
+  \begin{center}vorgelegt von\end{center}
+  \begin{center}
+   {\large Sven Schiffner} \\ geboren am 28.10.1994 in Sebnitz
+  \end{center}\medskip
+
+  \begin{singlespace}\begin{center}\large
+   Institut für Kern- und Teilchendphysik \\
+   Fachrichtung Physik \\
+   Fakultät Mathematik und Naturwissenschaften \\
+   Technische Universität Dresden \\ 2017
+  \end{center}\end{singlespace}
+ \end{tabularx}
+\end{titlepage}
+
+
+% Gutachterseite
+\thispagestyle{empty}\vspace*{48em}
+
+Eingereicht am 24.~Mai~2017\vspace{1.5em}
+\par{\large\begin{tabular}{ll}
+ 1. Gutachter: & Dr.~Frank Siegert \\
+ 2. Gutachter: & Prof.~Dr.~Michael Kobel \\
+\end{tabular}}
+
+
+% Abstractseite
+\newpage
+\begin{center}\large\bfseries Summary\end{center}
+
+
+Abstract \\ 
+English: \\
+
+\vspace{20em}
+Abstract \\ 
+Deutsch \\
+ 
+ 
+% Inhaltsverzeichnis
+
+%\cleardoublepage
+\tableofcontents
+
+
+
+% Hauptteil
+
+\chapter{Introduction}
+\input{general.tex}
+\chapter{Basic Physical Principles}
+\input{principles.tex}
+
+\chapter{Methods and Implemnetatio}
+\input{methods.tex}
+\chapter{Evaluation and Discussion}
+\input{evaluation.tex}
+
+\chapter{Summary and Outlook}
+\input{summary.tex}
+
+% bibliography
+\printbibliography
+
+
+% Erklärung
+\clearpage
+\thispagestyle{empty}
+\minisec{Erklärung}\vspace*{1.5em}
+
+Hiermit erkläre ich, dass ich diese Arbeit im Rahmen der Betreuung am Institut
+für Kern- und Teilchenphysik ohne unzulässige Hilfe Dritter verfasst und alle Quellen als solche gekennzeichnet habe.
+
+\vspace*{45em}
+
+Sven Schiffner \par
+Dresden, Mai 2017
+
+\end{document}

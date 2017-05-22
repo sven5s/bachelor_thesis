@@ -1,0 +1,28 @@
+\section{Decaysdata.db}
+\texttt{Sherpa} use for the decays from all kinds of particles the decay channels 
+and branching ratios from the \texttt{Decaysdata.db}. This database has to be 
+updated manually with data from the Particle Data Group (PDG) because there 
+exists no automation for this work. Also data from other sources are included, 
+e.g. EvtGen.\\
+Good results need actual data. The first part is to update the branching ratios 
+and deyays. For the \(\Xi(1690)\) was an implementation not possible because 
+there exists to few events about futher decays. The conclusion of different events 
+needs a lot of attention. For some events like \(\Lambda_c^+ \rightarrow  
+\Sigma(1385)^- + \pi^+ + \pi+\) only the channel \(\Sigma(1385) \rightarrow 
+\Lambda + \pi\) was recognized. So a division with the BR(\(\Sigma(1385) 
+\rightarrow \Lambda + \pi\)) was needed because \texttt{Sherpa} handle further 
+decays and consider all different decays of the \(\Sigma(1385)^-\). Table 
+{\eqref{ta:changes-decays}} was revealed with this knowledge.
+\begin{longtable}{| c | c | c | c |}
+  \caption{Changes in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:changes-decays}\\ 
+  \hline
+  \input{Decays.dat.changes}
+\end{longtable}
+In the case of \(\Lambda_c^+ \rightarrow P^+ pi^+ + pi^-\) was the decay 
+already included in \(Lambda_c^+ \rightarrow P^+ + f(0980)\). \(K_b\) was 
+removed from the PDG and only \(K_s\) exists. For \(Lambda_c^+ \rightarrow 
+\Lambda + \eta + pi^+\) give the difference between \(\Lambda + \pi^- + 
+\pi + \pi^+ + \pi^+\) and  \(\Sigma(1385)^+ + \eta\) the right value because 
+an \(\eta\) decays in \(\pi^+ + \pi^-\) and a \(\Sigma(1385)\) to 
+\(\Lambda + \pi\). But the decay of the \(\Sigma(1385)\) is a separate channel.
+
