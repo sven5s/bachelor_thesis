@@ -56,10 +56,10 @@ the V-A-Current another possible and popular writing is given in
 \begin{align}
   \langle B(p', s') | V_\mu | \Lambda_c(p, s) \rangle & = \bar{u}(p', s') 
   \left( f^V_1(q^2) \gamma_\mu + f^V_2(q^2)i\sigma_{\mu\nu}\frac{q^\nu}{m_{\Lambda_c}} + 
-  f^V_3(q^2)\frac{q_\mu}{m_B} \right) u(p, s) \nonumber \\
+  f^V_3(q^2)\frac{q_\mu}{m_{\Lambda_c}} \right) u(p, s) \nonumber \\
   \langle B(p', s') | A_\mu | \Lambda_c(p, s) \rangle & = \bar{u}(p', s') 
   \left( f^A_1(q^2) \gamma_\mu + f^A_2(q^2)\i\sigma_{\mu\nu}frac{q^\nu}{m_{\Lambda_c}} + 
-  f^A_3(q^2)\frac{q_\mu}{m_B} \right) \gamma^5 u(p, s) \label{eq:v-a-q}
+  f^A_3(q^2)\frac{q_\mu}{m_{\Lambda_c}} \right) \gamma^5 u(p, s) \label{eq:v-a-q}
 \end{align}
 
 In this notation is \(q = p - p'\). A convsersion formula is now needed for the 
@@ -198,11 +198,88 @@ And the second is the recoil of the W in {\eqref{eq:w}}
   {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}} \label{eq:w}
 \end{equation}
 
-\section{Form Factors}
-\subsection{Covarian Confined Quark Model (CCQM)}
+\section{Form Factor Models}
+\subsection{Covariant Confined Quark Model (CCQM)}
+The idea behind the covariant confined quark model is to use two loops 
+Feynman diagrams with free quark propagators. The high energy behavior of 
+the loop integrations is soften. This model was developed for mesons but 
+is extended to baryons. It is also possible to successfully calculate tetraquark 
+states with this theory.\\
+For the transition to \(\Lambda + l^+ + \nu_l\) the paper{\cite{CCQM_L}} was 
+considered and for \(n + l^+ + \nu_l\) the paper{\cite{CCQM_N}}.
+The parametrization of the form factor is given by {\eqref{eq:ccqmff}}
+\begin{equation}
+  f(q^2) = \frac{F(0)}{1 - a s + b s^2} \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:ccqmff}
+\end{equation}
+The parameters F(0), a and b are taken from the numerical results of {\cite{CCQM_L}}.
 
 \subsection{Non relativistic Quark Model (NRQM)}
+Baryons with a heavy quark possesses a special symmetry. This symmetry is 
+called heavy quark symmetry. This is based on works from Isgur and Wise. The name 
+of the theory behind that is heavy quark effective theory (HQET). The main impact 
+to the characteristics of the baryon results from the degrees of freedom of the 
+light quarks and are independent from the degrees of freedom of the heavy quark.\\
+This form factor can be used to calculate transistions to excited \(\Lambda\)
+baryons {\cite{NRQM}}. The parametrization of the form factors {\eqref{eq:nrqmff}} a more complicated compared 
+to the other ones.
+\begin{align}
+  F &= \left(a_0 + a_2 q^2 + a_4 q_4\right) e^{- \frac{3 m_\sigma^2 p_\Lambda^2}
+  {2 m_\Lambda^2 \alpha_{\lambda \lambda'}^2} } \nonumber\\
+  p_\Lambda & = \frac{1}{2 m_\Lambda}  \lambda^\frac{1}{2}(m_{\Lambda_c}^2, m_\Lambda^2, q^2) \nonumber \\
+  \lambda(x, y, z) & = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx \text{(triangle function)} \nonumber \\
+  \alpha_{\lambda \lambda'} & = \sqrt{\frac{\alpha_\lambda^2 + \alpha_{\lambda'}^2 }{2}} \label{eq:nrqmff}
+\end{align}
+In equation{\eqref{eq:nrqmff}} is \(m_\sigma\) the mass of the light quark 
+obtained from {\cite[p. 13/I]{NRQM}} and the \(\alpha_\lambda\) are size parameters of 
+the baryons from {\cite[p. 13/II]{NRQM}}.
+
 \subsection{Light-Cone Sume Rule (LCSR)}
+The light-cone sume rule is a vary famous technique in the class of QCD sum 
+rules. The basic idea is that the vacuum condensates carry no momentum. The 
+light-cone expansion is used with increasing twist. With this model was the 
+transition into \(\Lambda + l^+ + \nu_l\) in {\cite{LCSR}}  computed.\\
+The parametrization{\eqref{eq:lcsrff}} is through the same values for the 
+first two axial-vector and vector form factors very simple
+\begin{align}
+  f^V_1 & = f^A_1 \nonumber \\
+  f^V_2 & = f^A_2 \nonumber \\
+  f_i(q^2) & = \frac{f_i(0)}{a_2 s^2 + a_1 s + 1 } \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:lcsrff}
+\end{align}
+\(f_i(0)\), \(a_2\) and \(a_1\) are parameters of this parametrization. Only the 
+first two factors are nonzero.
+
 \subsection{Relativistic Quark Model (RQM)}
+The relativistic quark model{\cite{RQM}} is based on the diquark wave function 
+and the baryon wave function of the bound quark-diquark state. The calculation 
+were done with relativistic quasipotential equation of the Schr\"{o}dinger type.
+All computation were relativistically done.\\
+It can predict senmileptonic transitions into n as well as into \(\Lambda\).
+The parametrization{\eqref{eq:rqmff}} was done until a very high order of the 
+\(q^2\).
+\begin{equation}
+  F(q^2) = \frac{F(0)}{1 - \sigma_1 s + \sigma_2 s^2 + \sigma31 s^3 + \sigma_4 s^4} 
+  \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:rqmff}
+\end{equation}
+
 \subsection{QCD Sum Rule (QCDSR)}
+In the article {\cite{QCDSR}} are nonperturbative aspects used. The approach of 
+the QCD sum-rule is the expansion in local operators. Here is also the HQET usd 
+to reduce the complexity. \(\Lambda + l^+ + \nu_l\) is considered in the article.\\
+In this Model two different parametrizations exists. The pole parametrization 
+{\eqref{eq:qcdsrff-pp}} is used like in the other models. But this pole 
+parametrization is a lot simpler through relations between the form factors.
+\begin{align}
+  f^A_1 & = - f^V_1 \nonumber \\
+  f^A_2 & = f^V_2 \nonumber \\
+  f^V_i(q^2) & = \frac{a_0}{a_1 - q^2} \label{eq:qcdsrff-pp}
+\end{align} 
+The other form of the parametrization  {\eqref{eq:qcdsrff}} is more complicated 
+but through the exponential ansatz interesting.
+\begin{align}
+  f^A_1 & = - f^V_1 \nonumber \\
+  f^A_2 & = - f^V_2 \nonumber \\
+  f^V_1(q^2) & = e^{\frac{q^2 - a_1}{a_0}} \nonumber \\
+  f^V_2(q^2) & = \frac{a_0}{a_1 - q^2} \label{eq:qcdsrff}
+\end{align} 
+The third form factor is in both cases zero
 
