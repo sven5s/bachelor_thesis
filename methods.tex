@@ -44,9 +44,12 @@ most of the modern detectors can't detect neutrons very well. This comes from
 the neutral electric charge and the long lifetime of the neutron. An improved 
 measurement would be recommended because this processes are important for 
 the form factor calculation. The neutron is often considered as the final 
-decay state o the \(\Lambda_c^+\).
+decay state oif the \(\Lambda_c^+\).\\
+All these changes leads to a sum of all branching ratios from \(87,98\%\). 
+This is a pretty good value and very close to \(100\%\). This means that 
+the decay is very good abstracted.
 
-\section{Form factor conversion}
+\section{Form Factor conversion}
 The two formulas in {\eqref{eq:v-a}} show one popular parametrization for 
 the V-A-Current another possible and popular writing is given in 
 {\eqref{eq:v-a-q}}.
@@ -73,10 +76,133 @@ The first step is to create a transformation matrix like in {\eqref{eq:initmat}}
   \begin{bmatrix}
     1 & \frac{m_{\Lambda_c} + m_B }{2 m_{\Lambda_c}} & \frac{m_{\Lambda_c} + m_B }{2 m_B} & 0 & 0 & 0 \\
     0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} & 0 & 0 & 0 \\
-    0 & \frac{1}{2} & \frac{m_{\Lambda_c}}{2 m_B} & 0 & 0 & 0 \\
+    0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} & 0 & 0 & 0 \\
     0 & 0 & 0 & 1 & -\frac{m_{\Lambda_c} - m_B }{2 m_{\Lambda_c}} & - \frac{m_{\Lambda_c} - m_B }{2 m_B} \\
     0 & 0 & 0 & 0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
     0 & 0 & 0 & 0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B}
   \end{bmatrix}
   \cdot \Spvek{F_1; F_2; F_3; G_1; G_2; G_3} \label{eq:initmat}
 \end{equation}
+The block structure of the matrix is a mathemtaical manifestation of the 
+independence of the vector and axial-vector part. This matrix can be splitted 
+in two equations{\eqref{eq:splitmat}}.
+\begin{align}
+  \Spvek{f^V_1; f^V_2; f^V_3} & =
+  \begin{bmatrix}
+    1 & \frac{m_{\Lambda_c} + m_B }{2 m_{\Lambda_c}} & \frac{m_{\Lambda_c} + m_B }{2 m_B} \\
+    0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
+    0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
+  \end{bmatrix}
+  \cdot \Spvek{F_1; F_2; F_3} \nonumber \\
+  \Spvek{f^A_1; f^A_2; f^A_3} & =
+  \begin{bmatrix}
+    1 & -\frac{m_{\Lambda_c} - m_B }{2 m_{\Lambda_c}} & - \frac{m_{\Lambda_c} - m_B }{2 m_B} \\
+    0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
+    0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B}
+  \end{bmatrix}
+  \cdot \Spvek{G_1; G_2; G_3} \label{eq:splitmat}
+\end{align}
+The matrices can be inverted if the determinant is unequal to zero. The 
+determinant of both matrices are the same{\eqref{eq:det}}. This comes from the 
+block structure with the zeroes in the first column.
+\begin{equation}
+  det (\dots) = \frac{m_{\Lambda_c}}{2 m_B} \label{eq:det}
+\end{equation}
+If the mass of the \(\Lambda_c^+\) is nonzero than the matrices are invertible. And obviously 
+is this true. The matrix for \(G_i\) is really in the fashion of the one for 
+\(F_i\). So the inverting has only be done ones. The matrices in {\eqref{eq:finmat}}
+are calculated.
+\begin{align}
+  \Spvek{F_1; F_2; F_3} & =
+  \begin{bmatrix}
+    1 & \frac{3 m_{\Lambda_c} + m_B }{4 m_{\Lambda_c}} & -\frac{m_{\Lambda_c} + m_B }{4 m_B} \\
+    0 & -1 & 1 \\
+    0 & -\frac{m_B}{2 m_{\Lambda_c}} & -\frac{m_B}{2 m_{\Lambda_c}} \\
+  \end{bmatrix}
+  \cdot \Spvek{f^V_1; f^V_2; f^V_3} \nonumber \\
+  \Spvek{G_1; G_2; G_3} & =
+  \begin{bmatrix}
+    1 & -\frac{3 m_{\Lambda_c} - m_B }{4 m_{\Lambda_c}} & \frac{m_{\Lambda_c} + m_B }{4 m_B} \\
+    0 & -1 & 1 \\
+    0 & -\frac{m_B}{2 m_{\Lambda_c}} & -\frac{m_B}{2 m_{\Lambda_c}} \\
+  \end{bmatrix}
+  \cdot \Spvek{f^A_1; f^A_2; f^A_3}  \label{eq:finmat}
+\end{align}
+And finally for every form factor a transformation formula{\eqref{eq:fintrans}} 
+can be obtained.
+\begin{align}
+  F_1 & = f^V_1 + \frac{m_{\Lambda_c} + m_B }{4} \left( \frac{3 f^V_2}{m_{\Lambda_c}} - \frac{f^V_3}{m_B} \right) \nonumber \\
+  F_2 & = - f^V_2 + f^A_3 \nonumber \\
+  F_3 & = - \frac{m_B}{2 m_{\Lambda_c}} \left(f^V_2 + f^V_3 \right) \nonumber \\
+  G_1 & = f^A_1 + \frac{m_{\Lambda_c} - m_B }{4} \left( - \frac{3 f^V_2}{m_{\Lambda_c}} + \frac{f^V_3}{m_B} \right) \nonumber \\
+  G_2 & = - f^A_2 + f^A_3 \nonumber \\
+  G_3 & = - \frac{m_B}{2 m_{\Lambda_c}} \left(f^A_2 + f^V_3 \right) \label{eq:fintrans}
+\end{align}
+The basic class FormFactor\_Base from VA\_B\_B\_FFs in \texttt{HADRONS++/Current\_Library/VA\_B\_B.H} 
+is now extend with additional inline functions for the transformation. To use 
+every time the same parametrization and didn't mix them.
+
+\section{Prevoius Form Factor implementation}
+At first it is important to know wich current parametrization is already used 
+by the \texttt{VA\_B\_B.C} in \texttt{Sherpa}. With this information the right 
+form can be choosen.
+For a natural transition between two baryons the different coefficient
+{\eqref{eq:c-coeff}} are computed. A natural transition means that the decayer 
+and the daughter baryon have the same parity.
+\begin{align}
+  c_{R1} & = V_1 - A_1 \nonumber \\
+  c_{L1} & = -V_1 - A_1 \nonumber \\
+  c_{R2} & = V_2 - A_2 \nonumber \\
+  c_{L2} & = -V_2 - A_2 \nonumber \\
+  c_{R3} & = V_3 - A_3 \nonumber \\
+  c_{L3} & = -V_3 - A_3 \label{eq:c-coeff}
+\end{align}
+\(V_i\) and \(A_i\) comes from the choosen from factor model. The following 
+current{\eqref{eq:b-curr}} is sumed ove all possible helicities from the 
+decaying h\_0 and the daughter baryon h\_1.
+\begin{align}
+\begin{split}
+  V_\mu &= L_\mu(1, h_1, 0, h_0, c_{R1}, c_{L1}) + \\
+        & \frac{p_{0, \mu}}{m_0} * Y(1, h_1, 0, h_0, c_{R2}, c_{L2}) + \\
+        & \frac{p_{1, \mu}}{m_1} * Y(1, h_1, 0, h_0, c_{R3}, c_{L3}) \label{eq:b-curr}
+\end{split}
+\end{align}
+The definition of \(L_\mu\) is given in \cite[Eq. A.96]{diploma} and the Y in 
+\cite[Eq. A.94]{diploma}. They are visible again in {\eqref{eq:LY}}.
+\begin{align}
+  L_\mu(1, h_1, 0, h_0, c_{R1}, c_{L1}) & = \bar{u}(p_1, h_1)\gamma_\mu \left( c_{R1} P_R + c_{L1} P_L \right) u(p_0, h_0) \nonumber \\
+  Y(1, h_1, 0, h_0, c_{R2}, c_{L2}) & = \bar{u}(p_1, h_1) \left( c_{R2} P_R + c_{L2} P_L \right) u(p_0, h_0) \nonumber \\
+  Y(1, h_1, 0, h_0, c_{R3}, c_{L3}) & = \bar{u}(p_1, h_1) \left( c_{R3} P_R + c_{L3} P_L \right) u(p_0, h_0) \nonumber \\
+\end{align}
+The projection operators that are used in {\eqref{eq:LY}} are defined in {\eqref{eq:proj}}
+\begin{align}
+  P_R = \frac{1}{2} \left( 1 + \gamma_5 \right) \nonumber \\
+  P_L = \frac{1}{2} \left( 1 - \gamma_5 \right) \label{eq:proj}
+\end{align}
+This all equations together form a current wich is similiar to {\{\eqref{eq:v-a}}.
+This can also easily been seen through the signs of the \(\gamma_5\) and the 
+signs of the \(c_R\) and \(c_L\).
+All other current parametrization have to be converted to observe the 
+existing behavior.
+
+\section{Observables}
+Two observables are adapted from simulations of the \texttt{BELLE} experiment 
+to compare the different form factors.
+The first is \(q^2\) which is defined in {\eqref{eq:q2}}.
+\begin{equation}
+  q^2 = \left( p_{\Lambda_c} - p_B \right)^2 \label{eq:q2}
+\end{equation}
+And the second is the recoil of the W in {\eqref{eq:w}}
+\begin{equation}
+  w = \frac{p^2_{\Lambda_c} +  p^2_B - \left( p_{\Lambda_c} - p_B \right)^2}
+  {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}} \label{eq:w}
+\end{equation}
+
+\section{Form Factors}
+\subsection{Covarian Confined Quark Model (CCQM)}
+
+\subsection{Non relativistic Quark Model (NRQM)}
+\subsection{Light-Cone Sume Rule (LCSR)}
+\subsection{Relativistic Quark Model (RQM)}
+\subsection{QCD Sum Rule (QCDSR)}
+
