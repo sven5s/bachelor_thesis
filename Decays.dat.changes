@@ -3,33 +3,12 @@ Status  & Outgoing Part.	        & BR(Delta BR)[Origin]  & Decay \\ \hline
 
 \multicolumn{4}{ |c| }{Modes with nucleons/Deltas} \\ \hline
 old & {2212,-311}	       	        & 0.023(0.006)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b\) \\ \hline
-new & {2212,310}	       	        & 0.0158(0.0008)[PDG]   & \\ \hline
-old & {2212,-313}	 	            & 0.016(0.005)[PDG]	    & \(\Lambda_c^+ \rightarrow P^+ + K^\ast(892)_b\) \\ \hline
-new & {2212,-313}	 	            & 0.0198(0.0028)[PDG]   & \\ \hline
+new & {2212,310}	       	        & 0.0158(0.0008)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + K_s\)\\ \hline
 old & {2212,-321,211}        	    & 0.028(0.008)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+\) \\ \hline
 new & {2212,-321,211}        	    & 0.035(0.004)[PDG]     & \\ \hline
 old & {2212,-311,111}	       	    & 0.033(0.010)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi\) \\ \hline
 new & {2212,310,111}	       	    & 0.0199(0.0013)[PDG]   & \\ \hline
 old & {2212,-311,221}	       	    & 0.012(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow P^+K_b + \eta\) \\ \hline
-new & {2212,-311,221}	       	    & 0.016(0.004)[PDG]     & \\ \hline
-old & {2212,-311,211,-211}   	    & 0.026(0.007)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi^+\pi^-\) \\ \hline
-new & {2212,-311,211,-211}   	    & 0.049(0.004)[PDG]     & \\ \hline
-old & {2212,-311,211,-211}   	    & 0.026(0.007)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi^+ + \pi^-\) \\ \hline
-new & {2212,310,211,-211}   	    & 0.0166(0.0012)[PDG]   & \\ \hline
-old & {2212,-323,211}	 	        & 0.016(0.005)[PDG]	    & \(\Lambda_c^+ \rightarrow P^+ + K^\ast(892)^+_b + \pi^+\) \\ \hline
-new & {2212,-323,211}	 	        & 0.015(0.005)[PDG]     & \\ \hline
-old & {2212,-321,211,111}    	    & 0.036(0.012)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+ + \pi\) \\ \hline
-new & {2212,-321,211,111}    	    & 0.046(0.09)[PDG]      & \\ \hline
-old & {2212,-321,211,211,-211}    & 0.0011(0.0008)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+ + \pi^+ + \pi^-\) \\ \hline
-new & {2212,-321,211,211,-211}    & 0.0014(0.001)[PDG]    & \\ \hline
-old & {2212,-321,211,111,111}     & 0.008(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+ + \pi + \pi\) \\ \hline
-new & {2212,-321,211,111,111}     & 0.01(0.005)[PDG]      & \\ \hline
-old & {2212,333}	 	            & 0.00082(0.00027)[PDG] & \(\Lambda_c^+ \rightarrow P^+ + \phi(1020)\) \\ \hline
-new & {2212,333}	 	            & 0.00104(0.00021)[PDG] & \\ \hline
-S = 0  \\ \hline
-old & {2212,321,-321}	 	        & 0.00035(0.00017)[PDG] & \(\Lambda_c^+ \rightarrow P^+ + K^+ + K^-\) \\ \hline
-new & {2212,321,-321}	 	        & 0.00044(0.00018)[PDG] & \\ \hline
-S = 0 \\ \hline
 old & {2212,211,211,-211,-211}    & 0.018(0.012)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^+ + \pi^- + \pi^-\) \\ \hline
 new & {2212,211,211,-211,-211}    & 0.0023(0.0015)[PDG]   & \\ \hline
 S = 0 \\ \hline
@@ -46,57 +25,15 @@ new & {2224,-321}	 	            & 0.0109(0.0025)[PDG]   & \\ \hline
 old &  {3122,211}		            & 0.0107(0.0028)[PDG]   & \(\Lambda_c^+ \rightarrow \Lambda + \pi^+\) \\ \hline
 new & {3122,211}		            & 0.0130(0.0007)[PDG]   & \\ \hline
 created & {3122,211,111}		        & 0.071(0.0004)[PDG]    & \(\Lambda_c^+ \rightarrow \Lambda + \pi^+ + \pi\) \\ \hline
-created & {3122,213}		            & 0.036(0.013)[PDG]     & \\ \hline
+created & {3122,213}		            & 0.036(0.013)[PDG]     & \(\Lambda_c^+ \rightarrow \Lambda + \rho(770)^+\) \\ \hline
 S = 0 \\ \hline
 old & {3122,321}	 	            & 0.0005(0.00016)[PDG]	& \(\Lambda_c^+ \rightarrow \Lambda + K^+\) \\ \hline
 new & {3122,321}	 	            & 0.00061(0.00012)[PDG] & \\ \hline
-old & {3122,211,113}		        & 0.011(0.005)[PDG]   	& \(\Lambda_c^+ \rightarrow \Lambda + \pi^+ + \rho(770)\) \\ \hline
-new & {3122,211,113}		        & 0.015(0.006)[PDG]     & \\ \hline
-old & {3122,221,211}              & 0.018(0.006)[PDG]     & \(\Lambda_c^+ \rightarrow \Lambda + \eta + \pi^+\) \\ \hline
-new & {3122,221,211}              & 0.022(0.005)[PDG]     & \\ \hline
-old & {3122,223,211}              & 0.018(0.006)[PDG]     & \(\Lambda_c^+ \rightarrow \Lambda + \omega(782) + \pi^+\) \\ \hline
-new & {3122,223,211}              & 0.015(0.005)[PDG]     & \\ \hline
-old & {3122,321,-311}             & 0.0047(0.0015)[PDG]   & \(\Lambda_c^+ \rightarrow \Lambda + K^+ + K_b\) \\ \hline
-new & {3122,321,-311}             & 0.0057(0.0011)[PDG]   & \\ \hline
-old & {3114,211,211}              & 0.0055(0.0017)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma(1385)^- + \pi^+ + \pi^+\) \\ \hline
-new & {3114,211,211}              & 0.0090(0.0018)[PDG]   & \\ \hline
 created & {3112,211,211}              & 0.021(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow \Sigma^- + \pi^+ + \pi^+\) \\ \hline
-old & {3212,211}                  & 0.0105(0.0028)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma + \pi^+\) \\ \hline
-new & {3212,211}                  & 0.0129(0.0007)[PDG]   & \\ \hline
-S = 0 \\ \hline
-old & {3212,321}	 	            & 0.00042(0.00013)[PDG] & \(\Lambda_c^+ \rightarrow \Sigma + K^+\) \\ \hline
-new & {3212,321}	 	            & 0.00052(0.00008)[PDG] & \\ \hline
-old & {3212,211,211,-211}         & 0.0083(0.0031)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma + \pi^+ + \pi^+ + \pi^-\) \\ \hline
-new & {3212,211,211,-211}         & 0.0113(0.0029)[PDG]   & \\ \hline
-old & {3222,111}                  & 0.0100(0.0034)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma^+ + \pi\) \\ \hline
-new & {3222,111}                  & 0.0124(0.001)[PDG]    & \\ \hline
-old & {3222,221}                  & 0.0055(0.0023)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma^+ + \eta\) \\ \hline
-new & {3222,221}                  & 0.0070(0.0023)[PDG]   & \\ \hline
-old & {3222,211,-211}             & 0.013(0.005)[PDG]     & \(\Lambda_c^+ \rightarrow \Sigma^+ + \pi^+ + \pi^-\) \\ \hline
-new & {3222,211,-211}             & 0.0457(0.0029)[PDG]   & \\ \hline
-S = 0 \\ \hline
-old & {3222,313}	 	            & 0.002[EvtGen]	        & \(\Lambda_c^+ \rightarrow \Sigma^+ + K^\ast(892)\) \\ \hline
-new & {3222,313}                  & 0.0036(0.001)[PDG]    & \\ \hline
-old & {3222,223}                  & 0.027(0.01)[PDG]      & \(\Lambda_c^+ \rightarrow \Sigma^+ + \omega(782)\) \\ \hline
-new & {3222,223}                  & 0.0174(0.0021)[PDG]   & \\ \hline
-old & {3222,333}                  & 0.0031(0.0009)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma^+ + \phi(1020)\) \\ \hline
-new & {3222,333}                  & 0.0040(0.0006)[PDG]   & \\ \hline
-old & {3224,113}          	    & 0.0037(0.0031)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma(1385)^+ + \rho(770)\) \\ \hline
-new & {3224,113}          	    & 0.0072(0.0046)[PDG]   & \\ \hline
-old & {3224,221}   		        & 0.0085(0.0033)[PDG]   & \(\Lambda_c^+ \rightarrow \Sigma(1385i)^+ + \eta\) \\ \hline
-new & {3224,221}   		        & 0.00124(0.00037)[PDG] & \\ \hline
-old & {3224,211,-211}             & 0.007(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow \Sigma(1385)^+ + \pi^+ + \pi^-\) \\ \hline
-new & {3224,211,-211}             & 0.011(0.006)[PDG]     & \\ \hline
-old & {3322,321}	 	            & 0.0039(0.0014)[PDG]	& \(\Lambda_c^+ \rightarrow \Xi + K^+\) \\ \hline
-new & {3322,321}	 	            & 0.0050(0.0012)[PDG]   & \\ \hline
-old & {3312,321,211}	 	        & 0.0025(0.001)[PDG]	& \(\Lambda_c^+ \rightarrow \Xi^- + K^+ + \pi^+\) \\ \hline
-new & {3312,321,211}	 	        & 0.0062(0.0006)[PDG]   & \\ \hline
-old &  {3324,321}	 	            & 0.0026(0.001)[PDG]	& \(\Lambda_c^+ \rightarrow \Xi(1530) + K^+\) \\ \hline
-new & {3324,321}	 	            & 0.0033(0.0009)[PDG]   & \\ \hline
 \hline
 
 \multicolumn{4}{ |c| }{semileptonic modes} \\ \hline
 old &  {3122,12,-11}		        & 0.021(0.006)[PDG]	    & \(\Lambda_c^+ \rightarrow \Lambda + \nu_e + e^+\) \\ \hline
 new & {3122,12,-11}		        & 0.036(0.004)[PDG]     & \\ \hline
-old &{3122,14,-13}	 	        & 0.020(0.007)[PDG]	    & \(\Lambda_c^+ \rightarrow \Lambda + \nu_mu + mu^+\) \\ \hline
+old &{3122,14,-13}	 	        & 0.020(0.007)[PDG]	    & \(\Lambda_c^+ \rightarrow \Lambda + \nu_\mu + \mu^+\) \\ \hline
 new &{3122,14,-13}	 	        & 0.036(0.004)[PDG]     & \\ \hline

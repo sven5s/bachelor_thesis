@@ -12,17 +12,71 @@ needs a lot of attention. For some events like \(\Lambda_c^+ \rightarrow
 \Lambda + \pi\) was recognized. So a division with the BR(\(\Sigma(1385) 
 \rightarrow \Lambda + \pi\)) was needed because \texttt{Sherpa} handle further 
 decays and consider all different decays of the \(\Sigma(1385)^-\). Table 
-{\eqref{ta:changes-decays}} was revealed with this knowledge.
+{\eqref{ta:changes-full}} was revealed with this knowledge. An abstract is 
+visible in {\eqref{ta:changes-decays}}.
 \begin{longtable}{| c | c | c | c |}
-  \caption{Changes in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:changes-decays}\\ 
+  \caption{Extract of the changes in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:changes-decays}\\ 
   \hline
   \input{Decays.dat.changes}
 \end{longtable}
-In the case of \(\Lambda_c^+ \rightarrow P^+ pi^+ + pi^-\) was the decay 
-already included in \(Lambda_c^+ \rightarrow P^+ + f(0980)\). \(K_b\) was 
-removed from the PDG and only \(K_s\) exists. For \(Lambda_c^+ \rightarrow 
-\Lambda + \eta + pi^+\) give the difference between \(\Lambda + \pi^- + 
+In the case of \(\Lambda_c^+ \rightarrow P^+ \pi^+ + \pi^-\) was the decay 
+already included in \(\Lambda_c^+ \rightarrow P^+ + f(0980)\). \(K_b\) was 
+removed from the PDG and only \(K_s\) exists. For \(\Lambda_c^+ \rightarrow 
+\Lambda + \eta + \pi^+\) give the difference between \(\Lambda + \pi^- + 
 \pi + \pi^+ + \pi^+\) and  \(\Sigma(1385)^+ + \eta\) the right value because 
 an \(\eta\) decays in \(\pi^+ + \pi^-\) and a \(\Sigma(1385)\) to 
-\(\Lambda + \pi\). But the decay of the \(\Sigma(1385)\) is a separate channel.
+\(\Lambda + \pi\). But the decay of the \(\Sigma(1385)\) is a separate channel.\\
+These decays are selected because the full list would be too long and so 
+it is visible that some channel becomes likelier. But as an compensation other 
+process has to become less probable. These process are in most cases very 
+similiar and redistribution rests upon a better identification of the final 
+decay states and a better particle reconstruction. One of the important changes 
+is the increase of the branching ratios from the semileptonic decays by nearly 
+\(1 \%\).\\
+Other important process that didn't changed are shown in table{\eqref{ta:ndecays}}
+\begin{longtable}{| c | c | c | c |}
+  \caption{Decays in a neutron in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:ndecays}\\ 
+  \hline
+  \input{Decays.dat.neutron}
+\end{longtable}
+The branching for these semileptonic decays only simulated. The reason is that 
+most of the modern detectors can't detect neutrons very well. This comes from 
+the neutral electric charge and the long lifetime of the neutron. An improved 
+measurement would be recommended because this processes are important for 
+the form factor calculation. The neutron is often considered as the final 
+decay state o the \(\Lambda_c^+\).
 
+\section{Form factor conversion}
+The two formulas in {\eqref{eq:v-a}} show one popular parametrization for 
+the V-A-Current another possible and popular writing is given in 
+{\eqref{eq:v-a-q}}.
+\begin{align}
+  \langle B(p', s') | V_\mu | \Lambda_c(p, s) \rangle & = \bar{u}(p', s') 
+  \left( f^V_1(q^2) \gamma_\mu + f^V_2(q^2)i\sigma_{\mu\nu}\frac{q^\nu}{m_{\Lambda_c}} + 
+  f^V_3(q^2)\frac{q_\mu}{m_B} \right) u(p, s) \nonumber \\
+  \langle B(p', s') | A_\mu | \Lambda_c(p, s) \rangle & = \bar{u}(p', s') 
+  \left( f^A_1(q^2) \gamma_\mu + f^A_2(q^2)\i\sigma_{\mu\nu}frac{q^\nu}{m_{\Lambda_c}} + 
+  f^A_3(q^2)\frac{q_\mu}{m_B} \right) \gamma^5 u(p, s) \label{eq:v-a-q}
+\end{align}
+
+In this notation is \(q = p - p'\). A convsersion formula is now needed for the 
+different parametrization of the current. The equations in 
+{\cite[Eq. 15]{form_factor_conversion}} give one direction for transformation. 
+But most of the following form factors are in the form with p and p' and not 
+with q. So the inversion of the given transformation would be the easiest 
+way to get a decent formula. Another fact is that the current for an baryon 
+baryon transition in \texttt{Sherpa} is already in the form like {\eqref{eq:v-a}}. 
+The use of this parametrization let the implementation become a lot easier. 
+The first step is to create a transformation matrix like in {\eqref{eq:initmat}}
+\begin{equation}
+  \Spvek{f^V_1; f^V_2; f^V_3; f^A_1; f^A_2; f^A_3} =
+  \begin{bmatrix}
+    1 & \frac{m_{\Lambda_c} + m_B }{2 m_{\Lambda_c}} & \frac{m_{\Lambda_c} + m_B }{2 m_B} & 0 & 0 & 0 \\
+    0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} & 0 & 0 & 0 \\
+    0 & \frac{1}{2} & \frac{m_{\Lambda_c}}{2 m_B} & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & -\frac{m_{\Lambda_c} - m_B }{2 m_{\Lambda_c}} & - \frac{m_{\Lambda_c} - m_B }{2 m_B} \\
+    0 & 0 & 0 & 0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
+    0 & 0 & 0 & 0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B}
+  \end{bmatrix}
+  \cdot \Spvek{F_1; F_2; F_3; G_1; G_2; G_3} \label{eq:initmat}
+\end{equation}
