@@ -1,55 +1,61 @@
-\section{Decays Data}
-\texttt{Sherpa} use for the decays from all kinds of particles the decay channels 
-and branching ratios from the \texttt{Decaysdata.db}. This database has to be 
+\section{Decay table}
+\texttt{Sherpa} uses for the decays from all kinds of particles the decay channels 
+and branching ratios from a decay table. This table has to be 
 updated manually with data from the Particle Data Group (PDG) because there 
-exists no automation for this work. Also data from other sources are included, 
-e.g. EvtGen.\\
-Good results need actual data. The first part is to update the branching ratios 
-and deyays. For the \(\Xi(1690)\) was an implementation not possible because 
-there exists to few events about futher decays. The conclusion of different events 
-needs a lot of attention. For some events like \(\Lambda_c^+ \rightarrow  
-\Sigma(1385)^- + \pi^+ + \pi+\) only the channel \(\Sigma(1385) \rightarrow 
-\Lambda + \pi\) was recognized. So a division with the BR(\(\Sigma(1385) 
-\rightarrow \Lambda + \pi\)) was needed because \texttt{Sherpa} handle further 
-decays and consider all different decays of the \(\Sigma(1385)^-\). Table 
-{\eqref{ta:changes-full}} was revealed with this knowledge. An abstract is 
-visible in {\eqref{ta:changes-decays}}.
+exists no analytic calculations for the first principles. Also data from other 
+sources are included, e.g. EvtGen. But a big amount of decay channel and 
+branching ratios is taken from the PDG.\\
+Newer measurements of particle decays are more accurate and so it is important 
+to keep the decay table up to date. This will reduce the uncertainties for the 
+branching ratios and so all kinds of results that are taken from a simulation.\\
+A lot of changes were needed to update the decay table. An little abstract of 
+the changes are visible below:
 \begin{longtable}{| c | c | c |}
   \caption{Extract of the changes in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:changes-decays}\\ 
   \hline
   \input{Decays.dat.changes}
 \end{longtable}
-In the case of \(\Lambda_c^+ \rightarrow P^+ \pi^+ + \pi^-\) was the decay 
-already included in \(\Lambda_c^+ \rightarrow P^+ + f(0980)\). \(K_b\) was 
-removed from the PDG and only \(K_s\) exists. For \(\Lambda_c^+ \rightarrow 
-\Lambda + \eta + \pi^+\) give the difference between \(\Lambda + \pi^- + 
-\pi + \pi^+ + \pi^+\) and  \(\Sigma(1385)^+ + \eta\) the right value because 
-an \(\eta\) decays in \(\pi^+ + \pi^-\) and a \(\Sigma(1385)\) to 
-\(\Lambda + \pi\). But the decay of the \(\Sigma(1385)\) is a separate channel.\\
-These decays are selected because the full list would be too long and so 
-it is visible that some channel becomes likelier. But as an compensation other 
-process has to become less probable. These process are in most cases very 
-similiar and redistribution rests upon a better identification of the final 
-decay states and a better particle reconstruction. One of the important changes 
-is the increase of the branching ratios from the semileptonic decays by nearly 
-\(1 \%\).\\
-Other important process that didn't changed are shown in table{\eqref{ta:ndecays}}
-\begin{longtable}{| c | c | c | c |}
+The table above shows that the decay channel
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + K_b \nonumber
+\end{equation}
+was replaced by
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + K_s.  \nonumber
+\end{equation}
+The decay
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^- \nonumber
+\end{equation}
+was removed because the process is included in
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + f(0980) \nonumber
+\end{equation}
+due to the decay of the f(0980):
+\begin{equation}
+  f(0980) \rightarrow \pi^+ + \pi^-. \nonumber
+\end{equation}
+The full list of changes can be found at {\ref{ta:changes-full}}.
+
+The semileptonic decay of the \(\Lambda_c^+\) into a neutron is important for 
+further considerations.
+\begin{longtable}{| c | c |}
   \caption{Decays in a neutron in the Decays.dat from the \(\Lambda_c^+\)}\label{ta:ndecays}\\ 
   \hline
   \input{Decays.dat.neutron}
 \end{longtable}
-The branching for these semileptonic decays only simulated. The reason is that 
+The branching for these semileptonic decays are not taken from the PDG because
+no actual experimental data exists. The reason is that 
 most of the modern detectors can't detect neutrons very well. This comes from 
 the neutral electric charge and the long lifetime of the neutron. An improved 
 measurement would be recommended because this processes are important for 
 the form factor calculation. The neutron is often considered as the final 
-decay state oif the \(\Lambda_c^+\).\\
+decay state of the \(\Lambda_c^+\).\\
 All these changes leads to a sum of all branching ratios from \(87,98\%\). 
-This is a pretty good value and very close to \(100\%\). This means that 
-the decay is very good abstracted.
+This is near to \(100\%\). But there are still missing some branching 
+ratios.
 
-\section{Form Factor conversion}
+\section{Another Form Factor parametrization}
 The two formulas in {\eqref{eq:v-a}} show one popular parametrization for 
 the V-A-Current another possible and popular writing is given in 
 {\eqref{eq:v-a-q}}.
@@ -58,19 +64,18 @@ the V-A-Current another possible and popular writing is given in
   \left( f^V_1(q^2) \gamma_\mu + f^V_2(q^2)i\sigma_{\mu\nu}\frac{q^\nu}{m_{\Lambda_c}} + 
   f^V_3(q^2)\frac{q_\mu}{m_{\Lambda_c}} \right) u(p, s) \nonumber \\
   \langle B(p', s') | A_\mu | \Lambda_c(p, s) \rangle & = \bar{u}(p', s') 
-  \left( f^A_1(q^2) \gamma_\mu + f^A_2(q^2)\i\sigma_{\mu\nu}frac{q^\nu}{m_{\Lambda_c}} + 
+  \left( f^A_1(q^2) \gamma_\mu + f^A_2(q^2)\sigma_{\mu\nu}\frac{q^\nu}{m_{\Lambda_c}} + 
   f^A_3(q^2)\frac{q_\mu}{m_{\Lambda_c}} \right) \gamma^5 u(p, s) \label{eq:v-a-q}
 \end{align}
 
 In this notation is \(q = p - p'\). A convsersion formula is now needed for the 
-different parametrization of the current. The equations in 
+different parametrizations of the current. The equations in 
 {\cite[Eq. 15]{form_factor_conversion}} give one direction for transformation. 
 But most of the following form factors are in the form with p and p' and not 
 with q. So the inversion of the given transformation would be the easiest 
-way to get a decent formula. Another fact is that the current for an baryon 
-baryon transition in \texttt{Sherpa} is already in the form like {\eqref{eq:v-a}}. 
-The use of this parametrization let the implementation become a lot easier. 
-The first step is to create a transformation matrix like in {\eqref{eq:initmat}}
+way to get a decent formula.  
+The first step is to create a transformation matrix like below out of the 
+formulas in {\cite[Eq. 15]{form_factor_conversion}}.
 \begin{equation}
   \Spvek{f^V_1; f^V_2; f^V_3; f^A_1; f^A_2; f^A_3} =
   \begin{bmatrix}
@@ -85,7 +90,7 @@ The first step is to create a transformation matrix like in {\eqref{eq:initmat}}
 \end{equation}
 The block structure of the matrix is a mathemtaical manifestation of the 
 independence of the vector and axial-vector part. This matrix can be splitted 
-in two equations{\eqref{eq:splitmat}}.
+in two equations:.
 \begin{align}
   \Spvek{f^V_1; f^V_2; f^V_3} & =
   \begin{bmatrix}
@@ -93,25 +98,24 @@ in two equations{\eqref{eq:splitmat}}.
     0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
     0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
   \end{bmatrix}
-  \cdot \Spvek{F_1; F_2; F_3} \nonumber \\
+  \cdot \Spvek{F_1; F_2; F_3} \nonumber \text{ and }\\
   \Spvek{f^A_1; f^A_2; f^A_3} & =
   \begin{bmatrix}
     1 & -\frac{m_{\Lambda_c} - m_B }{2 m_{\Lambda_c}} & - \frac{m_{\Lambda_c} - m_B }{2 m_B} \\
     0 & -\frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B} \\
     0 & \frac{1}{2} & -\frac{m_{\Lambda_c}}{2 m_B}
   \end{bmatrix}
-  \cdot \Spvek{G_1; G_2; G_3} \label{eq:splitmat}
+  \cdot \Spvek{G_1; G_2; G_3}. \label{eq:splitmat}
 \end{align}
 The matrices can be inverted if the determinant is unequal to zero. The 
-determinant of both matrices are the same{\eqref{eq:det}}. This comes from the 
-block structure with the zeroes in the first column.
+determinant of both matrices are the same. This comes from the block 
+structure with the zeroes in the first column. The value for the determinant is
 \begin{equation}
-  det (\dots) = \frac{m_{\Lambda_c}}{2 m_B} \label{eq:det}
+  det (\dots) = \frac{m_{\Lambda_c}}{2 m_B}. \label{eq:det}
 \end{equation}
-If the mass of the \(\Lambda_c^+\) is nonzero than the matrices are invertible. And obviously 
-is this true. The matrix for \(G_i\) is really in the fashion of the one for 
-\(F_i\). So the inverting has only be done ones. The matrices in {\eqref{eq:finmat}}
-are calculated.
+If the mass of the \(\Lambda_c^+\) is nonzero than the matrices are invertible, which is 
+obviously true. The matrix for \(G_i\) is similar to the matrix for \(F_i\). So it is 
+enough to invert one matrix and compare with the other. The resulting matrices are:
 \begin{align}
   \Spvek{F_1; F_2; F_3} & =
   \begin{bmatrix}
@@ -119,47 +123,44 @@ are calculated.
     0 & -1 & 1 \\
     0 & -\frac{m_B}{2 m_{\Lambda_c}} & -\frac{m_B}{2 m_{\Lambda_c}} \\
   \end{bmatrix}
-  \cdot \Spvek{f^V_1; f^V_2; f^V_3} \nonumber \\
+  \cdot \Spvek{f^V_1; f^V_2; f^V_3} \nonumber \text{ and }\\
   \Spvek{G_1; G_2; G_3} & =
   \begin{bmatrix}
     1 & -\frac{3 m_{\Lambda_c} - m_B }{4 m_{\Lambda_c}} & \frac{m_{\Lambda_c} + m_B }{4 m_B} \\
     0 & -1 & 1 \\
     0 & -\frac{m_B}{2 m_{\Lambda_c}} & -\frac{m_B}{2 m_{\Lambda_c}} \\
   \end{bmatrix}
-  \cdot \Spvek{f^A_1; f^A_2; f^A_3}  \label{eq:finmat}
+  \cdot \Spvek{f^A_1; f^A_2; f^A_3}. \label{eq:finmat}
 \end{align}
-And finally for every form factor a transformation formula{\eqref{eq:fintrans}} 
-can be obtained.
+And finally for every form factor a transformation formula can be obtained:
 \begin{align}
   F_1 & = f^V_1 + \frac{m_{\Lambda_c} + m_B }{4} \left( \frac{3 f^V_2}{m_{\Lambda_c}} - \frac{f^V_3}{m_B} \right) \nonumber \\
   F_2 & = - f^V_2 + f^A_3 \nonumber \\
   F_3 & = - \frac{m_B}{2 m_{\Lambda_c}} \left(f^V_2 + f^V_3 \right) \nonumber \\
   G_1 & = f^A_1 + \frac{m_{\Lambda_c} - m_B }{4} \left( - \frac{3 f^V_2}{m_{\Lambda_c}} + \frac{f^V_3}{m_B} \right) \nonumber \\
   G_2 & = - f^A_2 + f^A_3 \nonumber \\
-  G_3 & = - \frac{m_B}{2 m_{\Lambda_c}} \left(f^A_2 + f^V_3 \right) \label{eq:fintrans}
+  G_3 & = - \frac{m_B}{2 m_{\Lambda_c}} \left(f^A_2 + f^V_3 \right). \label{eq:fintrans}
 \end{align}
-The basic class FormFactor\_Base from VA\_B\_B\_FFs in \texttt{HADRONS++/Current\_Library/VA\_B\_B.H} 
-is now extend with additional inline functions for the transformation. To use 
-every time the same parametrization and didn't mix them.
+These transformation formulas have been added to \texttt{Sherpa}.
 
-\section{Prevoius Form Factor implementation}
-At first it is important to know wich current parametrization is already used 
-by the \texttt{VA\_B\_B.C} in \texttt{Sherpa}. With this information the right 
-form can be choosen.
-For a natural transition between two baryons the different coefficient
-{\eqref{eq:c-coeff}} are computed. A natural transition means that the decayer 
-and the daughter baryon have the same parity.
+\section{Existing Form Factor implementation in \texttt{Sherpa}}
+First it is important to know wich current parametrization is already used 
+for baryon baryon transitions in \texttt{Sherpa}. With this information 
+the right form factor parametrization can be choosen.
+For a natural transition between two baryons the different coefficient 
+are computed as:
 \begin{align}
   c_{R1} & = V_1 - A_1 \nonumber \\
   c_{L1} & = -V_1 - A_1 \nonumber \\
   c_{R2} & = V_2 - A_2 \nonumber \\
   c_{L2} & = -V_2 - A_2 \nonumber \\
   c_{R3} & = V_3 - A_3 \nonumber \\
-  c_{L3} & = -V_3 - A_3 \label{eq:c-coeff}
+  c_{L3} & = -V_3 - A_3. \label{eq:c-coeff}
 \end{align}
-\(V_i\) and \(A_i\) comes from the choosen from factor model. The following 
-current{\eqref{eq:b-curr}} is sumed ove all possible helicities from the 
-decaying h\_0 and the daughter baryon h\_1.
+A natural transition means that the decayer and the daughter baryon have the same parity.
+\(V_i\) and \(A_i\) comes from the choosen from factor model for the transition. 
+They are other names for \(F_i\) and \(G_i\).
+The current 
 \begin{align}
 \begin{split}
   V_\mu &= L_\mu(1, h_1, 0, h_0, c_{R1}, c_{L1}) + \\
@@ -167,86 +168,74 @@ decaying h\_0 and the daughter baryon h\_1.
         & \frac{p_{1, \mu}}{m_1} \cdot Y(1, h_1, 0, h_0, c_{R3}, c_{L3}) \label{eq:b-curr}
 \end{split}
 \end{align}
+is sumed over all possible helicities from the decaying h\_0 and the daughter baryon h\_1.
 The definition of \(L_\mu\) is given in \cite[Eq. A.96]{diploma} and the Y in 
-\cite[Eq. A.94]{diploma}. They are visible again in {\eqref{eq:LY}}.
+\cite[Eq. A.94]{diploma}. These are internal functions of \texttt{Sherpa}. 
+They are defined as
 \begin{align}
   L_\mu(1, h_1, 0, h_0, c_{R1}, c_{L1}) & = \bar{u}(p_1, h_1)\gamma_\mu \left( c_{R1} P_R + c_{L1} P_L \right) u(p_0, h_0) \nonumber \\
   Y(1, h_1, 0, h_0, c_{R2}, c_{L2}) & = \bar{u}(p_1, h_1) \left( c_{R2} P_R + c_{L2} P_L \right) u(p_0, h_0) \nonumber \\
-  Y(1, h_1, 0, h_0, c_{R3}, c_{L3}) & = \bar{u}(p_1, h_1) \left( c_{R3} P_R + c_{L3} P_L \right) u(p_0, h_0) \label{eq:LY}
+  Y(1, h_1, 0, h_0, c_{R3}, c_{L3}) & = \bar{u}(p_1, h_1) \left( c_{R3} P_R + c_{L3} P_L \right) u(p_0, h_0). \label{eq:LY}
 \end{align}
-The projection operators that are used in {\eqref{eq:LY}} are defined in {\eqref{eq:proj}}
+The projection operators that are used in {\eqref{eq:LY}} are defined as
 \begin{align}
   P_R = \frac{1}{2} \left( 1 + \gamma_5 \right) \nonumber \\
-  P_L = \frac{1}{2} \left( 1 - \gamma_5 \right) \label{eq:proj}
+  P_L = \frac{1}{2} \left( 1 - \gamma_5 \right). \label{eq:proj}
 \end{align}
-This all equations together form a current wich is similiar to {\{\eqref{eq:v-a}}.
+This all equations together form a current wich is similar to {\{\eqref{eq:v-a}}.
 This can also easily been seen through the signs of the \(\gamma_5\) and the 
 signs of the \(c_R\) and \(c_L\).
 All other current parametrization have to be converted to observe the 
 existing behavior.
 
-\section{Observables}
-Two observables are adapted from simulations of the \texttt{BELLE} experiment 
-to compare the different form factors.
-The first is \(q^2\) which is defined in {\eqref{eq:q2}}.
-\begin{equation}
-  q^2 = \left( p_{\Lambda_c} - p_B \right)^2 \label{eq:q2}
-\end{equation}
-And the second is the recoil of the W in {\eqref{eq:w}}
-\begin{equation}
-  w = \frac{p^2_{\Lambda_c} +  p^2_B - \left( p_{\Lambda_c} - p_B \right)^2}
-  {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}} \label{eq:w}
-\end{equation}
-
 \section{Form Factor Models}
 \subsection{Covariant Confined Quark Model (CCQM)}
-The idea behind the covariant confined quark model is to use two loops 
-Feynman diagrams with free quark propagators. The high energy behavior of 
-the loop integrations is soften. This model was developed for mesons but 
+The idea behind the covariant confined quark model 
+({\cite{CCQM_N}}, {\cite{CCQM_L}}) is to use two loops 
+Feynman diagrams with free quark propagators. This model was developed for mesons but 
 is extended to baryons. It is also possible to successfully calculate tetraquark 
 states with this theory.\\
-For the transition to \(\Lambda + l^+ + \nu_l\) the paper{\cite{CCQM_L}} was 
-considered and for \(n + l^+ + \nu_l\) the paper{\cite{CCQM_N}}.
-The parametrization of the form factor is given by {\eqref{eq:ccqmff}}
+For the transition to \(\Lambda + l^+ + \nu_l\) {\cite{CCQM_L}} was 
+considered and for \(n + l^+ + \nu_l\) {\cite{CCQM_N}}.
+The parametrization of the form factor is given by
 \begin{equation}
-  f(q^2) = \frac{F(0)}{1 - a s + b s^2} \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:ccqmff}
+  f(q^2) = \frac{F(0)}{1 - a s + b s^2} \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:ccqmff}.
 \end{equation}
 The parameters F(0), a and b are taken from the numerical results of {\cite{CCQM_L}}.
 
 \subsection{Non relativistic Quark Model (NRQM)}
 Baryons with a heavy quark possesses a special symmetry. This symmetry is 
-called heavy quark symmetry. This is based on works from Isgur and Wise. The name 
-of the theory behind that is heavy quark effective theory (HQET). The main impact 
-to the characteristics of the baryon results from the degrees of freedom of the 
+called heavy quark symmetry. The main impact to the characteristics of the baryon results from the degrees of freedom of the 
 light quarks and are independent from the degrees of freedom of the heavy quark.\\
-This form factor can be used to calculate transistions to excited \(\Lambda\)
-baryons {\cite{NRQM}}. The parametrization of the form factors {\eqref{eq:nrqmff}} a more complicated compared 
-to the other ones.
+This form factor {\cite{NRQM}} can be used to calculate transistions to excited \(\Lambda\)
+baryons {\cite{NRQM}}. The parametrization of the form factors a more complicated compared 
+to the other ones:
 \begin{align}
   F &= \left(a_0 + a_2 q^2 + a_4 q_4\right) e^{- \frac{3 m_\sigma^2 p_\Lambda^2}
   {2 m_\Lambda^2 \alpha_{\lambda \lambda'}^2} } \nonumber\\
   p_\Lambda & = \frac{1}{2 m_\Lambda}  \lambda^\frac{1}{2}(m_{\Lambda_c}^2, m_\Lambda^2, q^2) \nonumber \\
-  \lambda(x, y, z) & = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx \text{(triangle function)} \nonumber \\
-  \alpha_{\lambda \lambda'} & = \sqrt{\frac{\alpha_\lambda^2 + \alpha_{\lambda'}^2 }{2}} \label{eq:nrqmff}
+  \lambda(x, y, z) & = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx \text{ (triangle function)} \nonumber \\
+  \alpha_{\lambda \lambda'} & = \sqrt{\frac{\alpha_\lambda^2 + \alpha_{\lambda'}^2 }{2}}, \label{eq:nrqmff}
 \end{align}
-In equation{\eqref{eq:nrqmff}} is \(m_\sigma\) the mass of the light quark 
-obtained from {\cite[p. 13/I]{NRQM}} and the \(\alpha_\lambda\) are size parameters of 
+where \(m_\sigma\) is the mass of the light quark obtained from 
+{\cite[p. 13/I]{NRQM}} and the \(\alpha_\lambda\) are size parameters of 
 the baryons from {\cite[p. 13/II]{NRQM}}.
 
 \subsection{Light-Cone Sume Rule (LCSR)}
-The light-cone sume rule is a vary famous technique in the class of QCD sum 
-rules. The basic idea is that the vacuum condensates carry no momentum. The 
-light-cone expansion is used with increasing twist. With this model was the 
-transition into \(\Lambda + l^+ + \nu_l\) in {\cite{LCSR}}  computed.\\
-The parametrization{\eqref{eq:lcsrff}} is through the same values for the 
-first two axial-vector and vector form factors very simple
+The light-cone sum rule is a very famous technique in the class of QCD sum 
+rules{\cite{LCSR}}. The basic idea is that the vacuum condensates carry no momentum. 
+The light-cone expansion is used with increasing twist. The transition from 
+\(\Lambda_c^+\) into \(\Lambda + l^+ + \nu_l\) is computed with this model in
+{\cite{LCSR}}.\\
+The parametrization is very simple due to  the same values for the 
+first two axial-vector and vector form factors:
 \begin{align}
   f^V_1 & = f^A_1 \nonumber \\
   f^V_2 & = f^A_2 \nonumber \\
-  f_i(q^2) & = \frac{f_i(0)}{a_2 s^2 + a_1 s + 1 } \text{ with } s = \frac{q^2}{m_{\Lambda_c}} \label{eq:lcsrff}
+  f_i(q^2) & = \frac{f_i(0)}{a_2 s^2 + a_1 s + 1 } \text{ with } s = \frac{q^2}{m_{\Lambda_c}}. \label{eq:lcsrff}
 \end{align}
 \(f_i(0)\), \(a_2\) and \(a_1\) are parameters of this parametrization. Only the 
-first two factors are nonzero.
+first two form factors are nonzero.
 
 \subsection{Relativistic Quark Model (RQM)}
 The relativistic quark model{\cite{RQM}} is based on the diquark wave function 
@@ -262,24 +251,24 @@ The parametrization{\eqref{eq:rqmff}} was done until a very high order of the
 \end{equation}
 
 \subsection{QCD Sum Rule (QCDSR)}
-In the article {\cite{QCDSR}} are nonperturbative aspects used. The approach of 
-the QCD sum-rule is the expansion in local operators. Here is also the HQET usd 
-to reduce the complexity. \(\Lambda + l^+ + \nu_l\) is considered in the article.\\
+Nonperturbative aspects are used in this sum rule {\cite{QCDSR}}. The approach of 
+the QCD sum rule is the expansion in local operators. \(\Lambda + l^+ + \nu_l\) 
+is considered in the article.\\
 In this Model two different parametrizations exists. The pole parametrization 
 {\eqref{eq:qcdsrff-pp}} is used like in the other models. But this pole 
-parametrization is a lot simpler through relations between the form factors.
+parametrization is a lot simpler due to the relations between the form factors.
 \begin{align}
   f^A_1 & = - f^V_1 \nonumber \\
   f^A_2 & = f^V_2 \nonumber \\
   f^V_i(q^2) & = \frac{a_0}{a_1 - q^2} \label{eq:qcdsrff-pp}
 \end{align} 
-The other form of the parametrization  {\eqref{eq:qcdsrff}} is more complicated 
-but through the exponential ansatz interesting.
+The other form of the parametrization {\eqref{eq:qcdsrff}} is more complicated 
+but interesting due to the exponential ansatz.
 \begin{align}
   f^A_1 & = - f^V_1 \nonumber \\
   f^A_2 & = - f^V_2 \nonumber \\
   f^V_1(q^2) & = e^{\frac{q^2 - a_1}{a_0}} \nonumber \\
   f^V_2(q^2) & = \frac{a_0}{a_1 - q^2} \label{eq:qcdsrff}
 \end{align} 
-The third form factor is in both cases zero.
+The third form factor is zero in both cases.
 

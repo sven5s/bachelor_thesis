@@ -1,14 +1,15 @@
 \section{Decay table}
-The decays of the \(\Lambda_c^+\) was simulated with the old and the new 
-decay tables. 100000000  decay events were used. This leads to an low 
+The decays of the \(\Lambda_c^+\) were simulated with the old and the new 
+decay table. 100000000  decay events were used. This leads to a low 
 statistic uncertainty. This section should show the impact of my changes in 
-decay tables. Selected inclusive modes are used to show the difference. The 
+the decay table. Selected inclusive modes are used to show the difference. The 
 observables multiplicity and energy are used for the comparison. The multiplicity 
-is the number of a specific particles that is created during the process. The 
-energy is measured by the squared four-momentum of the particle.\\
+is the number of created particles from the choosen type at the consideres state. The 
+energy is measured by the squared four-momentum of the particles from the choosen type.\\
 The figures in the following section can also be found in the appendix{\ref{a:primary}}.
 These figures only show the measurement of the particles after the primary 
-decay of the \(\Lambda_c^+\). The figures for the measurement at the final state 
+decay of the \(\Lambda_c^+\). The direct impact due to the changes in the decay 
+table  is so better visible. The figures for the measurement at the final state 
 of the decay chain are in {\ref{a:complete}}.
 
 \begin{figure}[h]
@@ -23,7 +24,7 @@ of the decay chain are in {\ref{a:complete}}.
   \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiMyonEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(\mu^+\)} \label{gr:prim-mup}
 \end{figure}
-In figures {\ref{gr:prim-ep}} and {\ref{gr:prim-mup}} you can see that 
+In the figures {\ref{gr:prim-ep}} and {\ref{gr:prim-mup}} you can see that 
 the change of the branching ratios of the semileptonic decays 
 resulting in a nearly equal multiplicity distribution but a significant different 
 energy spectrum for both leptons. The cut-off at the beginning of the muon 
@@ -36,11 +37,11 @@ The two main processes to create leptons are the semileptonic decays
 \begin{equation}
   \Lambda_c^+ \rightarrow n+ l^+ + \nu_l. \nonumber
 \end{equation}
-Only the branching ratios for the process with the \(\Lambda\) in the final state were changed. 
+Only the branching ratios for the processes with the \(\Lambda\) in the final state were changed. 
 The higher rest mass of the \(\Lambda\) compared to the neutron leads to leptons 
-with a lower energy. The branching ratio for the \(\Lambda\) were increased. The 
-braching ratio for the neutron is the same as before. The Increase of the 
-branching ratio is visible as the energy shift in the energy spectrum.\\
+with a lower energy. The braching ratios for the neutron decays are the same as 
+before but the branching ratio for the semileptonic \(\Lambda\) decays were increased. T
+he increase of the branching ratio is visible as the energy shift in the energy spectrum.\\
 The multiplicity didn't changed much because both processes have the same 
 multiplicity. The probability for one positron becomes a little lower. This 
 leads from the lower increase of the branching ratio of the electron compared 
@@ -191,15 +192,28 @@ because no processes were changed so drastically.
 
 \clearpage
 \section{Form Factor Models}
-\subsection{\(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\)}
-All diagrams of the form factors shwo the same behavior. There is no difference 
-in the semileptonic decays in electron or muon except of an sharp increase of 
-the beginnig of the graph for the muon. But this comes from the higher 
-mass of the muon compared to the electron.
+All diagrams of the form factors show the same behavior. There is no difference 
+in the semileptonic decays in electron or muon except of the cut-off due to 
+the muon higher mass compared to the elecron mass. So the figures for 
+the electrons were used in the following sections.
 
+\subsection{Observables}
+Two observables are adapted from simulations of the \texttt{BELLE} experiment 
+to compare the different form factors.
+The first is \(q^2\) which is defined in {\eqref{eq:q2}}.
+\begin{equation}
+  q^2 = \left( p_{\Lambda_c} - p_B \right)^2 \label{eq:q2}
+\end{equation}
+And the second is the recoil of the W in {\eqref{eq:w}}
+\begin{equation}
+  w = \frac{p^2_{\Lambda_c} +  p^2_B - \left( p_{\Lambda_c} - p_B \right)^2}
+  {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}} \label{eq:w}
+\end{equation}
+
+\subsection{previous form factor models}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/with_old_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/with_old_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the already implemented form factor models in leadding order (old)
   and with all factors for \(\Lambda\)} \label{gr:with_old_comp}
 \end{figure}
@@ -213,9 +227,10 @@ amon themselves are very impressive. The harmonic oszillator ones have general
 a more falt run in contrast to the sturmian ones with a linear increase an then 
 a sharp decline.
 
+\subsection{\(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\)}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/LCSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/LCSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the different parametrization of the LCSR model for \(\Lambda\)} \label{gr:lcsr}
 \end{figure}
 The both parametrization for the light-cone sum rule in {\eqref{gr:lcsr}} for 
@@ -225,7 +240,7 @@ with higher twist numbers it is only a theory.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/QCDSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/QCDSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the different parametrization of the QCDSR model for \(\Lambda\)} \label{gr:qcdsr}
 \end{figure}
 The behavior of the different parametrization {\eqref{gr:qcdsr}} of the QCD sum 
@@ -238,7 +253,7 @@ exception. This one describes more the transition between the parametrizations.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from some of the self implemented form factor models for \(\Lambda\)} \label{gr:others_comp}
 \end{figure}
 The diagram {\eqref{gr:others_comp}} shows the big differences between the 
@@ -249,7 +264,7 @@ The CCQM and the RQM are very similar.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the already implemented form factor models with 
   some of the self implemented ones for \(\Lambda\)} \label{gr:others_orig_comp}
 \end{figure}
@@ -261,7 +276,7 @@ form factor models. The LCSR have an analogical like the HONR.
 \subsection{\(\Lambda_c^+ \rightarrow n + l^+ + \nu_l\)}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronElectronQ2.pdf}
   \caption{Comparison from some of the self implemented form factor models for the neutron} \label{gr:others_comp_n}
 \end{figure}
 The form factor models {\eqref{gr:others_comp_n}} shows in general a more 
@@ -273,7 +288,7 @@ by the model.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronQ2.pdf}
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronElectronQ2.pdf}
   \caption{Comparison from the already implemented form factor models with 
   some of the self implemented ones for the neutron} \label{gr:others_orig_comp_n}
 \end{figure}

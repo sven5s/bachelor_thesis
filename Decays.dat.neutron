@@ -1,7 +1,7 @@
-Status  & Outgoing Part.	        & BR(Delta BR)[Origin]  & Decay \\ \hline
+Decay & BR(Delta BR)[Origin] \\ \hline
 \hline
 
-\multicolumn{4}{ |c| }{semileptonic modes} \\ \hline
-old & {2112,12,-11}	 	        & 0.003[EvtGen]         & \(\Lambda_c^+ \rightarrow n + \nu_e + e^+\) \\ \hline
-old & {2112,14,-13}	 	        & 0.003[EvtGen]         & \(\Lambda_c^+ \rightarrow n + \nu_\mu + \mu^+\) \\ \hline
+\multicolumn{2}{ |c| }{semileptonic modes} \\ \hline
+\(\Lambda_c^+ \rightarrow n + \nu_e + e^+\) & 0.003[EvtGen] \\ \hline
+\(\Lambda_c^+ \rightarrow n + \nu_\mu + \mu^+\) & 0.003[EvtGen] \\ \hline
 
