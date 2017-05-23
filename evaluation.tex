@@ -1,123 +1,197 @@
-\section{Decays data}
-With the old and the new decays data was made a simulation of the decay of the 
-\(\Lambda_c^+\). For a good statistic 100000000 events was used. This number 
-is a good comparison between runtime and number of events per bin.
+\section{Decay table}
+The decays of the \(\Lambda_c^+\) was simulated with the old and the new 
+decay tables. 100000000  decay events were used. This leads to an low 
+statistic uncertainty. This section should show the impact of my changes in 
+decay tables. Selected inclusive modes are used to show the difference. The 
+observables multiplicity and energy are used for the comparison. The multiplicity 
+is the number of a specific particles that is created during the process. The 
+energy is measured by the squared four-momentum of the particle.\\
+The figures in the following section can also be found in the appendix{\ref{a:primary}}.
+These figures only show the measurement of the particles after the primary 
+decay of the \(\Lambda_c^+\). The figures for the measurement at the final state 
+of the decay chain are in {\ref{a:complete}}.
+
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiElectron.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiElectronEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiElectron.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiElectronEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(e^+\)} \label{gr:prim-ep}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiMyon.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiMyonEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiMyon.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiMyonEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(\mu^+\)} \label{gr:prim-mup}
 \end{figure}
-In grpahics {\eqref{gr:prim-ep}} and {\eqref{gr:prim-mup}} you can see that 
-the change of the branching ratio of the semileptonic decay in a \(\Lambda\) 
-resulting in a nearly equal multiplicity but a significant different energy 
-spectrum for both leptons. The sharp increase at the beginning of the muon 
-energy spectrum comes from the bigger rest mass than the electron. This energy 
-is needed to create a detectable on-shell muon. The two main process to create 
-lepton are the semileptonic decay in \(\Lambda\) and n. Only the branching ratios 
-for the \(\Lambda\) were changed. The higher rest mass of the \(\Lambda\) compared 
-to the neutron lead to an significant energy shift. On the other hand the same 
-number of leptons were created in this process. But compared to the other the 
-branching ratio shifted a little bit to the muon, visible in the plots. 
-The same result for the probability of the multiplicity of the muon proof that 
-the changes in the branching ratios are proportional.\\
-If the plots from the whole decays are considered it becomes clear that these 
-edits also drastically changes the behavior in the final state.
-\par 
+In figures {\ref{gr:prim-ep}} and {\ref{gr:prim-mup}} you can see that 
+the change of the branching ratios of the semileptonic decays 
+resulting in a nearly equal multiplicity distribution but a significant different 
+energy spectrum for both leptons. The cut-off at the beginning of the muon 
+energy spectrum comes from the bigger rest mass than the electron.This energy is 
+needed to create a detectable on-shell muon.\\
+The two main processes to create leptons are the semileptonic decays
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l \nonumber
+\end{equation} and 
+\begin{equation}
+  \Lambda_c^+ \rightarrow n+ l^+ + \nu_l. \nonumber
+\end{equation}
+Only the branching ratios for the process with the \(\Lambda\) in the final state were changed. 
+The higher rest mass of the \(\Lambda\) compared to the neutron leads to leptons 
+with a lower energy. The branching ratio for the \(\Lambda\) were increased. The 
+braching ratio for the neutron is the same as before. The Increase of the 
+branching ratio is visible as the energy shift in the energy spectrum.\\
+The multiplicity didn't changed much because both processes have the same 
+multiplicity. The probability for one positron becomes a little lower. This 
+leads from the lower increase of the branching ratio of the electron compared 
+to the muon.\\
+These changes in the primary decay leads also to changes in the further decays.
+The figures for the measurement of the particles after the whole decay chain 
+in {\ref{a:complete}} look really the same.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi+.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi+Energy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi+.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi+Energy.pdf}
   \caption{multiplicity and energy spectrum of the \(\pi^+\)} \label{gr:prim-pip}
 \end{figure}
-The plots {\eqref{gr:prim-pip}} from the \(\pi^+\) show drastic changes. Through 
-the update the probability for no and one particle becomes equal. This leads 
-mainly from the processes with Outgoing part 3224,211,-211 and 3212,211 because 
-there only one \(\pi^+\) is created and both ratios are increased. The adding 
-of the process with the outgoing part 3112,211,211 is the reason for the 
-increase of 2-multiplicity events. The padding of the gap near 0.7 GeV comes 
-also from a created process, 3122,211,111. The reason for this clear identification 
-can be located in the Plot {\eqref{gr:prim-pi}} of the \(\pi\). There the same gap 
-is filled. The last peak is obtained from 2112,211. Only two particles were 
-created and so the the pion get an very high energy. This process is also 
-probable with \(0.3\%\). That's explain the peak. The second peak 
-results from 3122,211 because the \(\Lambda\) has  slightly higher mass than 
-the n and so the peak is moved backwards. The peak that is very close to the 
-\(\Lambda\) peak results from the process 3212,211. The \(\Sigma\) has nearly 
-the same mass and so the peaks are very close. The peak with the lowest 
-energy belongs to a decay that doesn't changed and so it is not included in 
-this thesis. The process is \(Lambda_c^+ \rightarrow \Delta(1232) + \pi^+\) 
-with an BR of \(0.3 \%\). The mass of the \(\Delta(1232)\) is higher compared 
-to the others and so the peak has to be at a lower position.
+The plots {\ref{gr:prim-pip}} from the \(\pi^+\) show drastic changes. This 
+changes will be discussed in the following paragraph. Due to the update of 
+the decay table the probability for multiplicity zero and one processes
+becomes equal. This leads mainly from the processes
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Sigma(1385)^+ + \pi^+ + \pi^- \nonumber
+\end{equation} and 
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Sigma + \pi^+. \nonumber
+\end{equation}
+In these processes one \(\pi^+\) is created and both branching ratios has been increased. This explains the 
+increase of the probability for the production of on pion.\\
+The decay channel
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Sigma^- + \pi^+ + \pi^+ \nonumber
+\end{equation}
+was added to the decay table. This process leads to the increase of the probability for 
+pion multiplicity two.
+\par
+The new decay channel
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Lambda + \pi^+ + \pi \nonumber
+\end{equation}
+is the reason why the gap near 0.7 GeV is filled. It is the only reason for this 
+change because in {\ref{gr:prim-pi}} happens the same thing for the \(\pi\).
+And the only new process with a \(\pi^+\) and a \(\pi\) in the final state 
+is the process
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Lambda + \pi^+ + \pi \nonumber
+\end{equation}
+The peaks in the energy spectrum can be identified with specific decay channels.
+This channels are \( 1 \rightarrow 2 \) processes because in such a process the 
+dynamics of the end products is well determined due to momentum conversation.
+The peak with the highest energy is obtained from 
+\begin{equation}
+  \Lambda_c^+ \rightarrow n + \pi^+ \nonumber
+\end{equation}
+because the proton have the lowest mass from all products of \( 1 \rightarrow 2 \) 
+processes with a \(\pi^+\) in the final state. The second peak comes from 
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Lambda + \pi^+, \nonumber
+\end{equation}
+the third from 
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Sigma + \pi^+ \nonumber
+\end{equation}
+and the fourth from 
+\begin{equation}
+  \Lambda_c^+ \rightarrow \Delta(1232) + \pi^+. \nonumber
+\end{equation}
+The peak from the \(\Delta(1232)\) is at the lowest postion because the mass of 
+this particle is the highest compared to the others.
+
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/PiEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Pi.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/PiEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(\pi\)} \label{gr:prim-pi}
 \end{figure}
-The picture {\eqref{gr:prim-pi}} is very similar to {\eqref{gr:prim-pip}}. In 
-further decays this graph is not visible because the \(\pi\) is not stable.
-The peak at the highest energy comes from 2212,111. The peak is nearly on the same 
-position because the mass of the proton is nearly the mass of the neutron. 
-There exists no decay channel in a \(\Lambda\) baryon for the neutral pion. So 
-the pick at this position is missing. The others peak are the same because 
-the mass of the charged baryons only slightly different to the correspondending
-neutral baryon.
+The diagram {\ref{gr:prim-pi}} is very similar to {\ref{gr:prim-pip}}. For a 
+complete decay chain {\ref{a:complete}} the distribution for the \(\pi\) 
+disappears because it is unstable.\\
+In the further consideration only the other end product for \( 1 \rightarrow 2 \) process
+that leads to a peak is used to characterize the decay. This is simpler and the 
+other end product will always be the regarded particle of the energy spectrum. 
+The other end product besides the \(\pi\) has to be a positive charged particle. 
+The family of baryons for the decay will be the same only a charged particle is 
+picked up. For the \(\Lambda\) baryons exist only the \(\Lambda_t^+\) besides 
+the \(\Lambda_c^+\) with a positive charge. Both are no decay candidates because 
+their masses are to high. So at this position there will be no peak. The 
+peaks from the right to the left results from the following decays:
+n, \(\Sigma^+\), \(\Delta(1232)^+\).
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K+.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K+Energy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K+.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K+Energy.pdf}
   \caption{multiplicity and energy spectrum of the \(K^+\)} \label{gr:prim-Kp}
 \end{figure}
-The diagram {\eqref{gr:prim-Kp}} show only little changes. No processes were 
-added and so this resukt is aspected. Through the masses of the other particle 
-in the final state the peaks can be connected to the different processes. From 
-right to the left peaks the decay partner are \(\Lambda\), \(\Sigma\), \(\Xi\),
-\(\Sigma(1385)\) and \(\Xi(1530)\).
+The diagram {\ref{gr:prim-Kp}} show only little changes. No decay channels 
+with a \(K^+\) in the final state were added and so this result is aspected. 
+Due to the masses of the other particle in the final state the peaks can be 
+connected to the different decay channels. From right to the left the peaks 
+results from \( 1 \rightarrow 2 \) decays with a \(\Lambda\), \(\Sigma\), \(\Xi\),
+\(\Sigma(1385)\) or a \(\Xi(1530)\) and a \(K^+\) in the final state.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiK.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiKEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiK.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiKEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(\bar{K}\)} \label{gr:prim-Kb}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Ks.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/KsEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/Ks.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/KsEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(K_s\)} \label{gr:prim-Ks}
 \end{figure}
-The events that are missed in {\eqref{gr:prim-Kb}} are in {\eqref{gr:prim-Ks}}
-because the process 2212,-311 was changed to 2212,310 and 
-2212,-311,211,-211 to 2212,310,211,-211. This leads to the two 
-diagrams. The peak in {\eqref{gr:prim-Ks}} belongs to the proton
+The events that are missed in {\ref{gr:prim-Kb}} are in {\ref{gr:prim-Ks}}
+because the process
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + K_b \nonumber
+\end{equation}
+was changed to 
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + K_s \nonumber
+\end{equation}.
+The process
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + K_s + \pi^+ + \pi^- \nonumber
+\end{equation}
+was added as a decay channel. This leads to the distribution in the two diagrams. 
+The peak in {\ref{gr:prim-Ks}} belongs to the proton.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/KEnergy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/K.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/KEnergy.pdf}
   \caption{multiplicity and energy spectrum of the \(K\)} 
 \end{figure}
-\(\Sigma^+\) is the reason for the high isolated peak and \(\Sigma(1385)+\) for 
-the peak on the hill. The diagrams are changed because the branching ratios 
-were changed, they decreased
+The \( 1 \rightarrow 2 \) decays with a \(\Sigma^+\) is the reason for the high 
+isolated peak and \(\Sigma(1385)+\) for the peak on the hill. The diagrams are 
+changed slightly  because the branching ratios were changed. They were decreased.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiPi+.pdf}
-  \includegraphics[width=0.45\textwidth]{../results/identified_states/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiPi+Energy.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiPi+.pdf}
+  \includegraphics[width=0.45\textwidth]{../results/identified_states_new/comp_data/rivet-plots/MeasureLeptonsAndMoreDirectChildren/AntiPi+Energy.pdf}
   \caption{multiplicity and energy spectrum of the \(\pi^-\)} \label{gr:prim-pi}
 \end{figure}
-The decrease of the process 2212,211,211,-211,-211 has an dramatically impact 
-of the multiplicity diagram because it is the only one that produces two \(\pi^-\).
-The red bulge is a superposition of all little chances because no processes were 
-changed so drastically.
+The decrease of the process
+\begin{equation}
+  \Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^+ + \pi^- + \pi^- \nonumber
+\end{equation}
+has an dramatically impact of the multiplicity diagram because it is the only process 
+that produces two \(\pi^-\). The red bulge is a superposition of all little changes 
+because no processes were changed so drastically.
+
 
 \clearpage
 \section{Form Factor Models}
+\subsection{\(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\)}
 All diagrams of the form factors shwo the same behavior. There is no difference 
 in the semileptonic decays in electron or muon except of an sharp increase of 
 the beginnig of the graph for the muon. But this comes from the higher 
@@ -175,6 +249,18 @@ The CCQM and the RQM are very similar.
 
 \begin{figure}[h]
   \centering
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
+  \caption{Comparison from the already implemented form factor models with 
+  some of the self implemented ones for \(\Lambda\)} \label{gr:others_orig_comp}
+\end{figure}
+In {\eqref{gr:others_orig_comp}} is a comparison with the original implemented 
+form factor models. The LCSR have an analogical like the HONR.
+
+
+\clearpage
+\subsection{\(\Lambda_c^+ \rightarrow n + l^+ + \nu_l\)}
+\begin{figure}[h]
+  \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronQ2.pdf}
   \caption{Comparison from some of the self implemented form factor models for the neutron} \label{gr:others_comp_n}
 \end{figure}
@@ -184,15 +270,6 @@ The other models were used with the harmonic oszillator semi relativistic
 model (HOSR). This model was the previous default. Important to register is that 
 through the lower mass of the neutron the bigger range has to be discribed 
 by the model.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaQ2.pdf}
-  \caption{Comparison from the already implemented form factor models with 
-  some of the self implemented ones for \(\Lambda\)} \label{gr:others_orig_comp}
-\end{figure}
-In {\eqref{gr:others_orig_comp}} is a comparison with the original implemented 
-form factor models. The LCSR have an analogical like the HONR.
 
 \begin{figure}[h]
   \centering

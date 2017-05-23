@@ -14,8 +14,7 @@ old & {2212,-311,221}	       	    & 0.012(0.004)[PDG]     & \(\Lambda_c^+ \right
 new & {2212,-311,221}	       	    & 0.016(0.004)[PDG]     & \\ \hline
 old & {2212,-311,211,-211}   	    & 0.026(0.007)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi^+ + \pi^-\) \\ \hline
 new & {2212,-311,211,-211}   	    & 0.049(0.004)[PDG]     & \\ \hline
-old & {2212,-311,211,-211}   	    & 0.026(0.007)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi^+ + \pi^-\) \\ \hline
-new & {2212,310,211,-211}   	    & 0.0166(0.0012)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + K_s + \pi^+ + \pi^-\) \\ \hline
+created & {2212,310,211,-211}   	    & 0.0166(0.0012)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + K_s + \pi^+ + \pi^-\) \\ \hline
 old & {2212,-323,211}	 	        & 0.016(0.005)[PDG]	    & \(\Lambda_c^+ \rightarrow P^+ + K^\ast(892)^+_b + \pi^+\) \\ \hline
 new & {2212,-323,211}	 	        & 0.015(0.005)[PDG]     & \\ \hline
 old & {2212,-321,211,111}    	    & 0.036(0.012)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+ + \pi\) \\ \hline

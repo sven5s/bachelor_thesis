@@ -1,39 +1,30 @@
-Status  & Outgoing Part.	        & BR(Delta BR)[Origin]  & Decay \\ \hline
+Decay  &  \multicolumn{2}{ |c| }{BR(Delta BR)[Origin]} \\ \hline
+    &   old     &   new \\ \hline
 \hline
 
-\multicolumn{4}{ |c| }{Modes with nucleons/Deltas} \\ \hline
-old & {2212,-311}	       	        & 0.023(0.006)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b\) \\ \hline
-new & {2212,310}	       	        & 0.0158(0.0008)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + K_s\)\\ \hline
-old & {2212,-321,211}        	    & 0.028(0.008)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+\) \\ \hline
-new & {2212,-321,211}        	    & 0.035(0.004)[PDG]     & \\ \hline
-old & {2212,-311,111}	       	    & 0.033(0.010)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + K_b + \pi\) \\ \hline
-new & {2212,310,111}	       	    & 0.0199(0.0013)[PDG]   & \\ \hline
-old & {2212,-311,221}	       	    & 0.012(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow P^+K_b + \eta\) \\ \hline
-old & {2212,211,211,-211,-211}    & 0.018(0.012)[PDG]     & \(\Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^+ + \pi^- + \pi^-\) \\ \hline
-new & {2212,211,211,-211,-211}    & 0.0023(0.0015)[PDG]   & \\ \hline
+\multicolumn{3}{ |c| }{Modes with nucleons/Deltas} \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + K_b\) & 0.023(0.006)[PDG] & - \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + K_s\) & - & 0.0158(0.0008)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + K^- + \pi^+\) & 0.028(0.008)[PDG] & 0.035(0.004)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + K_b + \pi\) & 0.033(0.010)[PDG] & 0.0199(0.0013)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^+ + \pi^- + \pi^-\) & 0.018(0.012)[PDG] & 0.0023(0.0015)[PDG] \\ \hline
 S = 0 \\ \hline
-old & {2212,9010221}              & 0.0028(0.0019)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + f(0980)\) \\ \hline
-new & {2212,9010221}              & 0.0035(0.0023)[PDG]   & \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + f(0980)\) & 0.0028(0.0019)[PDG] & 0.0035(0.0023)[PDG] \\ \hline
 S = 0 \\ \hline
-deleted & {2212,211,-211}             & 0.0007(0.0007)[PDG]   & \(\Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^-\) \\ \hline
+\(\Lambda_c^+ \rightarrow P^+ + \pi^+ + \pi^-\) & 0.0007(0.0007)[PDG] & - \\ \hline
 S = 0 \\ \hline
-old & {2224,-321}	 	            & 0.0086(0.003[PDG]	    & \(\Lambda_c^+ \rightarrow \Delta(1232)^{++} + K^-\) \\ \hline
-new & {2224,-321}	 	            & 0.0109(0.0025)[PDG]   & \\ \hline
+\(\Lambda_c^+ \rightarrow \Delta(1232)^{++} + K^-\) & 0.0086(0.003[PDG] & 0.0109(0.0025)[PDG] \\ \hline
 \hline
 
-\multicolumn{4}{ |c| }{Modes with hyperons} \\ \hline
-old &  {3122,211}		            & 0.0107(0.0028)[PDG]   & \(\Lambda_c^+ \rightarrow \Lambda + \pi^+\) \\ \hline
-new & {3122,211}		            & 0.0130(0.0007)[PDG]   & \\ \hline
-created & {3122,211,111}		        & 0.071(0.0004)[PDG]    & \(\Lambda_c^+ \rightarrow \Lambda + \pi^+ + \pi\) \\ \hline
-created & {3122,213}		            & 0.036(0.013)[PDG]     & \(\Lambda_c^+ \rightarrow \Lambda + \rho(770)^+\) \\ \hline
+\multicolumn{3}{ |c| }{Modes with hyperons} \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + \pi^+\) & 0.0107(0.0028)[PDG] & 0.0130(0.0007)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + \pi^+ + \pi\) & - & 0.071(0.0004)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + \rho(770)^+\) & - & 0.036(0.013)[PDG] \\ \hline
 S = 0 \\ \hline
-old & {3122,321}	 	            & 0.0005(0.00016)[PDG]	& \(\Lambda_c^+ \rightarrow \Lambda + K^+\) \\ \hline
-new & {3122,321}	 	            & 0.00061(0.00012)[PDG] & \\ \hline
-created & {3112,211,211}              & 0.021(0.004)[PDG]     & \(\Lambda_c^+ \rightarrow \Sigma^- + \pi^+ + \pi^+\) \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + K^+\) & 0.0005(0.00016)[PDG] & 0.00061(0.00012)[PDG] \\ \hline
+ \(\Lambda_c^+ \rightarrow \Sigma^- + \pi^+ + \pi^+\) & - & 0.021(0.004)[PDG] \\ \hline
 \hline
 
-\multicolumn{4}{ |c| }{semileptonic modes} \\ \hline
-old &  {3122,12,-11}		        & 0.021(0.006)[PDG]	    & \(\Lambda_c^+ \rightarrow \Lambda + \nu_e + e^+\) \\ \hline
-new & {3122,12,-11}		        & 0.036(0.004)[PDG]     & \\ \hline
-old &{3122,14,-13}	 	        & 0.020(0.007)[PDG]	    & \(\Lambda_c^+ \rightarrow \Lambda + \nu_\mu + \mu^+\) \\ \hline
-new &{3122,14,-13}	 	        & 0.036(0.004)[PDG]     & \\ \hline
+\multicolumn{3}{ |c| }{semileptonic modes} \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + \nu_e + e^+\) & 0.021(0.006)[PDG] & 0.036(0.004)[PDG] \\ \hline
+\(\Lambda_c^+ \rightarrow \Lambda + \nu_\mu + \mu^+\) & 0.020(0.007)[PDG] & 0.036(0.004)[PDG] \\ \hline
