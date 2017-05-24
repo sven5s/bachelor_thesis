@@ -192,25 +192,38 @@ because no processes were changed so drastically.
 
 \clearpage
 \section{Form Factor Models}
-All diagrams of the form factors show the same behavior. There is no difference 
+All diagrams of the form factors show the same behavior, there is no difference 
 in the semileptonic decays in electron or muon except of the cut-off due to 
-the muon higher mass compared to the elecron mass. So the figures for 
-the electrons were used in the following sections.
+the higher muon mass compared to the elecron mass. So the figures for 
+the electrons were used in the following sections.\\
+The goal of this section is to find the best form factor model that fits 
+the experimental results {\ref{gr:data}} from the CLEO II detector{\cite{data}}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/exp_data.pdf}
+  \caption{Experimental results from the CLEO II detector for the 
+  \(\Lambda_c^+ \rightarrow \Lambda + e^+ + \nu_e\) decay} \label{gr:data}
+\end{figure}
+The CLEO II detector has measured the \(\Lambda_c^+ \rightarrow \Lambda + e^+ + \nu_e\)
+ decay channel. The observables for the comparison have to be defined first.
 
 \subsection{Observables}
 Two observables are adapted from simulations of the \texttt{BELLE} experiment 
 to compare the different form factors.
-The first is \(q^2\) which is defined in {\eqref{eq:q2}}.
+The first is \(q^2\) which is defined as
 \begin{equation}
-  q^2 = \left( p_{\Lambda_c} - p_B \right)^2 \label{eq:q2}
+  q^2 = \left( p_{\Lambda_c} - p_B \right)^2a \label{eq:q2}
 \end{equation}
-And the second is the recoil of the W in {\eqref{eq:w}}
+and the second is the recoil of the W boson:
 \begin{equation}
   w = \frac{p^2_{\Lambda_c} +  p^2_B - \left( p_{\Lambda_c} - p_B \right)^2}
-  {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}} \label{eq:w}
+  {2 \cdot \sqrt{p^2_{\Lambda_c}} \cdot \sqrt{p^2_B}}. \label{eq:w}
 \end{equation}
+The experimental data use the first observable {\eqref{eq:q2}}. So only this 
+one will be compared. The figures for the recoil of the W boson can be found 
+in the appendix{\ref{a:ffm}}
 
-\subsection{previous form factor models}
+\subsection{Previous form factor models}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/with_old_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
@@ -218,49 +231,60 @@ And the second is the recoil of the W in {\eqref{eq:w}}
   and with all factors for \(\Lambda\)} \label{gr:with_old_comp}
 \end{figure}
 
-The diagram {\eqref{gr:with_old_comp}} shows that influence of the higher form 
-factors is for this model not neglectable. So it is important to uncomment 
-the Y function of {\eqref{eq:LY}} in \texttt{VA\_B\_B.C}. This will be obtain 
-more accurate results because the author of these models make his calculations 
-with all terms and not only with the leading order form factors. The deviations 
-amon themselves are very impressive. The harmonic oszillator ones have general 
-a more falt run in contrast to the sturmian ones with a linear increase an then 
-a sharp decline.
+For the \(\Lambda_c^+\) alrady exists four form factor models. The harmonic 
+oszillator non relativistic (HONR), the harmonic oszillator semi relativistic 
+(HOSR), the sturmian non relativistic (STNR) and the the sturmian semi 
+relativistic (STSR) model. Harmonic oszillator and sturmian are to different 
+expansion bases for the wave function. {\cite{prev}} \\
+But for this models only the first form factor were used to calculate the 
+transition matrix. These are the lines that marked with old. The other four 
+lines are made with the whole number of form factors. You can see that the shape 
+of the curves with only one form factor are more flat compared 
+to the curves with all form factors. So all form factors have a not neglectable 
+influence to the transistion matrix element and the leading order term is not 
+enough for the simulation.\\ 
+For the following form factor models all form factors are used to get accurate 
+results.
 
+\clearpage
 \subsection{\(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\)}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/LCSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the different parametrization of the LCSR model for \(\Lambda\)} \label{gr:lcsr}
 \end{figure}
-The both parametrization for the light-cone sum rule in {\eqref{gr:lcsr}} for 
-different twist show the similar properties. Twist 6 looks like that the steep 
-ascent will increase with a higher twist number but without more calculations 
-with higher twist numbers it is only a theory.
+The both parametrizations of the light-cone sum rule in {\ref{gr:lcsr}} for 
+different twist show similar properties. You can see that this model did not 
+fit the experimental results.\\
+
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/QCDSR_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from the different parametrization of the QCDSR model for \(\Lambda\)} \label{gr:qcdsr}
 \end{figure}
-The behavior of the different parametrization {\eqref{gr:qcdsr}} of the QCD sum 
-rule model is for the two classes of parametrizations very different. The pole 
-parametrizations itself are very similar. They only have little deviations. The 
-general curve is flat and has no small maximum. The complete parametrizations 
-on the other hand have a clear maxmimum and a more steep slope. The full 
-parametrisation with the contiunuums model triangualr and \(\kappa = 2\) is an 
-exception. This one describes more the transition between the parametrizations.
+Triangular and Rectangular are different continuums models in figure 
+{\ref{gr:qcdsr}} used by the QCD sum rule  model and the number is the value 
+of \(\kappa\). This is an parameter of the parametrization.
+The behavior of the QCD sum rule model  in {\ref{gr:qcdsr}} is very different 
+for the two classes of parametrizations, Pole and Full. The pole 
+parametrizations themselves are very similar. They only have little deviations 
+to each other. The general behavior of the pole parametrizations is flat and 
+has no thin maximum.\\ 
+The full parametrizations on the other hand have a clear maxmimum and a more steep 
+slope. The full parametrization with the continuums model triangular and \(\kappa = 2\) is an 
+exception. The full parametrizations in the rectangular continuums model 
+are very close and a dstinction is not possible.\\
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/LambdaElectronQ2.pdf}
   \caption{Comparison from some of the self implemented form factor models for \(\Lambda\)} \label{gr:others_comp}
 \end{figure}
-The diagram {\eqref{gr:others_comp}} shows the big differences between the 
-difference models. The spread between the curves is very high and 
-experimental data is needed to really compare this data and select the 
-right form factor model.\\
-The CCQM and the RQM are very similar.
+The diagram {\ref{gr:others_comp}} shows the big differences between the 
+different models. The spread between the curves is very high. The CCQM and 
+the RQM are very similar. The QCDSR model with triangular continuums model 
+and \(\kappa = 2\) fits the experimental data best.\\
 
 \begin{figure}[h]
   \centering
@@ -269,36 +293,28 @@ The CCQM and the RQM are very similar.
   some of the self implemented ones for \(\Lambda\)} \label{gr:others_orig_comp}
 \end{figure}
 In {\eqref{gr:others_orig_comp}} is a comparison with the original implemented 
-form factor models. The LCSR have an analogical like the HONR.
+form factor models. The LCS is similar to the HONR.\\
+The STSR fits the measurement also well. But the first bin is not matching 
+very well and also the maximum is to low.\\
+
+So the model that fits the decay \(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\) 
+the best is the QCDSR model with triangular continuums model and \(\kappa = 2\).
 
 
 \clearpage
 \subsection{\(\Lambda_c^+ \rightarrow n + l^+ + \nu_l\)}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronElectronQ2.pdf}
-  \caption{Comparison from some of the self implemented form factor models for the neutron} \label{gr:others_comp_n}
-\end{figure}
-The form factor models {\eqref{gr:others_comp_n}} shows in general a more 
-flat run. Only the CCQM and the RQM have an computation for the neutron.
-The other models were used with the harmonic oszillator semi relativistic 
-model (HOSR). This model was the previous default. Important to register is that 
-through the lower mass of the neutron the bigger range has to be discribed 
-by the model.
-
-\begin{figure}[h]
-  \centering
   \includegraphics[width=0.6\textwidth]{../results/formfactor_new/others_orig_comp/rivet-plots/LambdaCPlus_semileptonic/NeutronElectronQ2.pdf}
   \caption{Comparison from the already implemented form factor models with 
-  some of the self implemented ones for the neutron} \label{gr:others_orig_comp_n}
+  the self implemented ones for the neutron} \label{gr:others_orig_comp_n}
 \end{figure}
-This {\eqref{gr:others_orig_comp_n}} is a comparison of all four form factor 
-models for the neutron because for LCSR and STSR the HOSR is used. The models for 
-the neutron didn't have such big deviations like the ones for the \(\Lambda\). 
-So the choice of the model is for the neutron not so important because all of this 
-will give similar results.
-\par
-And so the concentration should lay on the \(\Lambda\). But without good 
-experimental datas a clean comparison is not possible and so no model can 
-be preferred.
+The form factor models {\ref{gr:others_orig_comp_n}} shows in general a more 
+flat shape compared to the results for the \(\Lambda_c^+ \rightarrow \Lambda + l^+ + \nu_l\) 
+decay. Only the CCQM and the RQM have an computation for the neutron.
+The already implemented HOSR was also used. No experimental data exists for this 
+decay.\\ 
+The models for the neutron didn't have such big deviations like the ones for the \(\Lambda\). 
+So the choice of the model is not so important for the neutron because all of this 
+will give similar results due to the similar shape.
 
